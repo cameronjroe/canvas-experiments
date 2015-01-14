@@ -1,6 +1,6 @@
 $(function () {
 
-  var vector = {
+  window.vector = {
     _x: 1,
     _y: 0,
 
@@ -61,6 +61,26 @@ $(function () {
 
     divide: function (val) {
       return vector.create(this._x / val, this._y / val);
+    },
+
+    addTo: function (v2) {
+      this._x += v2.getX();
+      this._y += v2.getY();
+    },
+
+    subtractFrom: function (v2) {
+      this._x -= v2.getX();
+      this._y -= v3.getY();
+    },
+
+    multiplyBy: function (val) {
+      this._x *= val;
+      this._y *= val;
+    },
+
+    divideBy: function (val) {
+      this._x /= val;
+      this._y /= val;
     }
 
   }
